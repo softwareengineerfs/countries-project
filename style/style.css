@@ -1,3 +1,9 @@
+:root {
+  --text-color: #111517;
+  --element-bg: #fff ;
+  --body-bg: #FAFAFA ;
+}
+
 /* GLOBAL STYLES*/
 html {
   box-sizing: border-box;
@@ -11,34 +17,160 @@ html {
   box-sizing: inherit;
 }
 
+
+.dark-mode {
+  --text-color: #fff;
+  --element-bg: #2B3844;
+  --body-bg:  #202C36 ;
+
+}
 body {
  display: flex;
  flex-direction: column;
  padding: 0%;
  margin: 0%;
  height: 100%;
- font-family: "Arial",sans-serif;
- font-size: 16px;
- line-height: 1.5;
- background-color: #fff;
- color: #222;
+ background-color: var(--body-bg);
+ color: var(--text-color);
+ font-family: "Nunito Sans","Arial",sans-serif;
+ font-size: 14px;
+ font-style: normal;
+ font-weight: 300;
+ line-height: 16px;
+ transition: background-color 0.3s ease ,
+ color 0.3s ease;
 }
 
 img {
   max-width: 100%;
   height: auto;
 }
+a {
+  text-decoration: none;
+}
 
 /* CONTAINER */
 .container {
 width: 100%;
-max-width: 1200;
+max-width: 1320px;
 margin-right: auto;
 margin-left: auto;
-padding-left: 50px;
-padding-right: 50px;
+padding-left: 20px;
+padding-right: 20px;
 }
 
 .main-content {
   flex-grow: 1;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+/* FONTS*/
+/* nunito-sans-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/nunito-sans-v15-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/nunito-sans-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-sans-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/nunito-sans-v15-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-sans-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/nunito-sans-v15-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* SITE HEADER */
+.site-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: var(--element-bg);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+  white-space: nowrap;
+}
+.site-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.site-header-logo {
+  font-size: 24px;
+  line-height: normal;
+  font-weight: 800;
+  color: var(--text-color);
+}
+.site-header-logo:hover {
+  opacity: 0.8;
+}
+.site-header-logo:active {
+  opacity: 0.6;
+}
+.site-header-theme-toggler {
+  padding: 0%;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--text-color);
+}
+.site-header-theme-toggler:hover {
+  opacity: 0.8;
+}
+.site-header-theme-toggler:active {
+  opacity: 0.6;
+}
+.site-header-theme-toggler-inner {
+  display: flex;
+  align-items: center;
+}
+.site-header-theme-toggler-text {
+  margin-left: 8px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+
+/* FILTERS */
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.filters-search-input {
+  min-width: 480px;
+  padding: 18px 74px;
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--element-bg);
+  color: var(--text-color);
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+}
+.filters-region-select {
+  min-width: 200px;
+  padding: 18px 24px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+  background-color: var(--element-bg);
+  color: var(--text-color);
 }
