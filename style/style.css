@@ -3,6 +3,7 @@
   --element-bg: #fff ;
   --body-bg: #FAFAFA ;
   --transition-duration: 0.4s ;
+  --serach-icon-color: #848484 ;
 }
 
 /* GLOBAL STYLES*/
@@ -23,6 +24,7 @@ html {
   --text-color: #fff;
   --element-bg: #2B3844;
   --body-bg:  #202C36 ;
+  --serach-icon-color: #fff;
 
 }
 body {
@@ -179,7 +181,16 @@ padding-right: 20px;
   background-color: var(--element-bg);
   color: var(--text-color);
 }
-
+.filters-search-wrapper {
+  position: relative;
+}
+.filter-search-icon {
+  position: absolute;
+  left: 32px;
+  top: 19px;
+  color: var(--serach-icon-color);
+  pointer-events: none;
+}
 
 /* INDEX COUNTRIES */
 
